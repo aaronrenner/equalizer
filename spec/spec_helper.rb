@@ -6,7 +6,7 @@ if ENV['COVERAGE'] == 'true'
 
   SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
     SimpleCov::Formatter::HTMLFormatter,
-    Coveralls::SimpleCov::Formatter,
+    Coveralls::SimpleCov::Formatter
   ]
 
   SimpleCov.start do
@@ -20,12 +20,8 @@ if ENV['COVERAGE'] == 'true'
   end
 end
 
+require 'devtools/spec_helper'
 require 'equalizer'
-
-# TODO: FIXME!
-# Cache correct freezer in ice_nine before
-# rspec2 infects the world...
-Equalizer.new
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expect_with|
