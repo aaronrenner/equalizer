@@ -17,5 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files       = `git ls-files -- spec/{unit,integration}`.split("\n")
   gem.extra_rdoc_files = %w[LICENSE README.md CONTRIBUTING.md]
 
+  gem.required_ruby_version = '>= 1.9.3'
+
   gem.add_development_dependency('bundler', '~> 1.3', '>= 1.3.5')
 end
