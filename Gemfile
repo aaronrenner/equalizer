@@ -6,7 +6,7 @@ gemspec
 
 group :test do
   gem 'backports'
-  gem 'mime-types', '~> 1.25', :platforms => [:jruby, :ruby_18]
+  gem 'mime-types', '~> 1.25', :platforms => [:jruby]
 end
 
 group :development, :test do
