@@ -3,7 +3,6 @@
 require 'spec_helper'
 
 describe Equalizer, '.new' do
-
   let(:object) { described_class }
   let(:name)   { 'User'          }
   let(:klass)  { ::Class.new     }
