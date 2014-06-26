@@ -64,6 +64,7 @@ TooManyMethods:
 TooManyStatements:
   enabled: true
   exclude:
+  - Equalizer#define_inspect_method
   - each
   max_statements: 5
 UncommunicativeMethodName:

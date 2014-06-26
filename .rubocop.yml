@@ -1,6 +1,8 @@
 AllCops:
-  Includes:
+  Include:
+    - '**/*.rake'
+    - 'Rakefile'
+  Exclude:
     - 'Gemfile'
-  Excludes:
     - 'Gemfile.devtools'
     - 'vendor/**'

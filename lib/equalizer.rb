@@ -65,7 +65,7 @@ private
   # @api private
   def define_hash_method
     keys = @keys
-    define_method(:hash) do ||
+    define_method(:hash) do | |
       keys.map(&method(:send)).push(self.class).hash
     end
   end
@@ -77,7 +77,7 @@ private
   # @api private
   def define_inspect_method
     keys = @keys
-    define_method(:inspect) do ||
+    define_method(:inspect) do | |
       klass = self.class
       name  = klass.name || klass.inspect
       "#<#{name}#{keys.map { |key| " #{key}=#{send(key).inspect}" }.join}>"
@@ -115,7 +115,7 @@ private
     # @api public
     def ==(other)
       other = coerce(other) if respond_to?(:coerce, true)
-      other.kind_of?(self.class) && cmp?(__method__, other)
+      other.is_a?(self.class) && cmp?(__method__, other)
     end
 
   end # module Methods
