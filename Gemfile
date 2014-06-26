@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
-  gem 'backports'
   gem 'mime-types', '~> 1.25', :platforms => [:jruby]
 end
 
