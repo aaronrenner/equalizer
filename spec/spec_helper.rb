@@ -20,11 +20,11 @@ if ENV['COVERAGE'] == 'true'
   end
 end
 
-require 'devtools/spec_helper'
-require 'equalizer'
-
 RSpec.configure do |config|
   config.expect_with :rspec do |expect_with|
     expect_with.syntax = :expect
   end
 end
+
+require 'devtools/spec_helper'
+require 'equalizer'
